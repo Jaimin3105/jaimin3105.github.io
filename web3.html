@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>brandlift Media Agency</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            background: #0e0e0e;
+            color: white;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 50px;
+            background: #000;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header h1 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #ffcc00;
+        }
+
+        header nav a {
+            color: white;
+            margin-left: 25px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        
+        header nav a:hover {
+            color: #ffcc00;
+        }
+
+        .hero {
+            height: 90vh;
+            background: url('https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f') center/cover no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero h2 {
+            font-size: 55px;
+            font-weight: 700;
+            text-shadow: 0 0 10px black;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-top: 15px;
+            width: 60%;
+            text-shadow: 0 0 10px black;
+        }
+        
+        /* Button container for alignment */
+        .hero .hero-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+        
+        .btn {
+            padding: 14px 30px;
+            background: #ffcc00;
+            color: black;
+            border-radius: 6px;
+            font-size: 18px;
+            cursor: pointer;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background: #e6b800;
+        }
+
+        /* Secondary Share Button Style */
+        .btn-secondary {
+            padding: 14px 30px;
+            background: transparent;
+            color: #ffcc00;
+            border: 2px solid #ffcc00;
+            border-radius: 6px;
+            font-size: 18px;
+            cursor: pointer;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .btn-secondary:hover {
+            background: #ffcc00;
+            color: black;
+        }
+
+        .services {
+            padding: 80px 50px;
+            text-align: center;
+        }
+
+        .services h2 {
+            font-size: 40px;
+            margin-bottom: 40px;
+        }
+
+        .service-boxes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .box {
+            background: #1b1b1b;
+            padding: 40px;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .box:hover {
+            transform: scale(1.05);
+            background: #252525;
+        }
+
+        /* PRICING */
+        .pricing {
+            padding: 80px 50px;
+            background: #111;
+            text-align: center;
+        }
+
+        .pricing h2 {
+            font-size: 40px;
+            margin-bottom: 40px;
+        }
+
+        .price-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .price-box {
+            background: #1b1b1b;
+            padding: 35px;
+            border-radius: 14px;
+            border: 2px solid #ffcc00;
+        }
+
+        .price-box h3 {
+            font-size: 26px;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-size: 35px;
+            margin: 15px 0;
+            color: #ffcc00;
+        }
+
+        .price-box ul {
+            list-style: none;
+            margin-top: 15px;
+            text-align: left;
+        }
+
+        .price-box ul li {
+            margin: 10px 0;
+        }
+
+        /* FAQ */
+        .faq {
+            padding: 70px 50px;
+            text-align: center;
+        }
+
+        .faq h2 {
+            font-size: 40px;
+        }
+
+        .faq p {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        .contact {
+            background: #000;
+            padding: 70px 50px;
+            text-align: center;
+        }
+
+        /* Contact Link Styles */
+        .contact p {
+            margin: 10px 0;
+            font-size: 20px;
+        }
+
+        .contact .contact-link {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact .contact-link:hover {
+            color: #ffcc00;
+        }
+
+        footer {
+            padding: 20px;
+            text-align: center;
+            background: #111;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>brandlift Media</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h2>Grow Your Brand With Professional Editing</h2>
+        <p>Reels, graphics, video editing & social media management — everything your brand needs to go viral.</p>
+        
+        <div class="hero-buttons">
+            <a class="btn" href="#contact">Hire Us</a>
+            
+                
+            </a>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <h2>Services</h2>
+        <div class="service-boxes">
+            <div class="box"><h3>🎬 Video Editing</h3><p>YouTube, cinematic, promo edits, ads.</p></div>
+            <div class="box"><h3>📱 Reels Editing</h3><p>Fast transitions, trendy edits & viral styles.</p></div>
+            <div class="box"><h3>📊 Social Media Handling</h3><p>Full growth management of Instagram, FB, YT.</p></div>
+            <div class="box"><h3>🎨 Graphic Design</h3><p>Posters, thumbnails, banners & branding.</p></div>
+        </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+        <h2>Pricing Plans</h2>
+
+        <div class="price-cards">
+            <div class="price-box">
+                <h3>Starter</h3>
+                <div class="price">₹999</div>
+                <ul>
+                    <li>5 Reels Editing</li>
+                    <li>Basic Colour Grading</li>
+                    <li>1 Social Media Platform</li>
+                </ul>
+            </div>
+
+            <div class="price-box">
+                <h3>Professional</h3>
+                <div class="price">₹2499</div>
+                <ul>
+                    <li>15 Reels Editing</li>
+                    <li>Pro Transitions</li>
+                    <li>Thumbnail + Graphic Design</li>
+                    
+                </ul>
+            </div>
+
+            <div class="price-box">
+                <h3>Business</h3>
+                <div class="price">₹4999</div>
+                <ul>
+                    <li>30 Reels Editing</li>
+                    <li>Full Account Management</li>
+                    <li>Daily Posts + Story</li>
+                    <li>Monthly Growth Strategy</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq">
+        <h2>FAQ</h2>
+        <p>✔ Delivery: 24–48 hours per reel </p>
+        <p>✔ Unlimited revisions in Business Plan</p>
+        <p>✔ Payment via UPI / Bank transfer</p>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <p>
+            📞 
+            <a href="tel:+918128477803" class="contact-link">
+                +91 8128477803
+            </a>
+        </p>
+        <p>
+            📧 
+            <a href="mailto:jaiminparmar.com" class="contact-link">
+                jaiminparmar.com
+            </a>
+        </p>
+        <p>
+            💬 
+            <a href="https://wa.me/918128477803" target="_blank" class="contact-link">
+                WhatsApp Chat
+            </a>
+        </p>
+        <p>
+            📸 
+            <a href="https://www.instagram.com/jaimin_xo?igsh=Y3g5dTZhM2NmYzZp" target="_blank" class="contact-link">
+                Follow us on Instagram
+            </a>
+        </p>
+    </section>
+
+    <footer>
+        © 2025 brandlift Media. All rights reserved.
+    </footer>
+
+</body>
+</html>
